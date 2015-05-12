@@ -1,0 +1,7 @@
+ofxGui
+ofxOpenCv
+ofxXmlSettings
+ofxCv
+ofxTweenzor
+ofxWin7
+ofxWinTouch
