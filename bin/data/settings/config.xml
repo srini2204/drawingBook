@@ -1,0 +1,46 @@
+<config>
+    
+	<appSettings>
+		<app>Westfield-SpaceDrums</app>
+	</appSettings>
+	
+	<analytics>
+		<inactivityThreshold>10</inactivityThreshold>
+		<dwellTolerance>3</dwellTolerance>
+		<minimumAge>12</minimumAge>
+		<!-- 
+		Schedule: cron format 'm h d M W'
+		 	Where:	'm' is the minute 
+					'h' is the hour   
+		 			'd' is the day    
+		 			'M' is the month (0=>jan)  
+					'W' is the weekday (0=>sunday) 
+			Specials: 	'*' is the wildcard (matches all)
+						',' to specify multiple values
+						'/' to specify the increment
+			Presets:	'@hourly' is every hour at the hour
+						'@daily' is ever day at midnight
+						'@weekly' is every sunday at midnight
+						'@monthly' is every 1st of the month at midnight
+						'@yearly' is every 1st january at midnight
+		-->
+        <reportSchedule>@hourly</reportSchedule>
+
+        <!-- send reports every 3 hours -->
+        <reportSendingSchedule><![CDATA[0 */3 32 * *]]></reportSendingSchedule>
+        <!-- clean up every day at 10:00 PM -->
+		<cleanupSchedule><![CDATA[0 22 * * *]]></cleanupSchedule>
+
+		<!-- cleanupMinDays: minimum age in days of sent reports that may be deleted to free up space-->
+		<cleanupMinDays>30</cleanupMinDays>
+		<reportDirectory><![CDATA[Analytics]]></reportDirectory>
+		<APIUrl><![CDATA[]]></APIUrl>
+		<APIkey><![CDATA[GJK345jjklJL343jk39sfjn]]></APIkey>
+	</analytics>
+    
+    <!-- 0 = cam, 1 = PGR, 2 = Kinect -->
+	<cameras>
+		<camera orientation='0' horizontalFlip='0' width='1024' height='576' type="0" useShore="1"/>
+	</cameras>
+    
+</config>

@@ -1,4 +1,8 @@
-bin/*
+
 *.opensdf
 *.sdf
 obj/*
+*.pdb
+*.lib
+*.ilk
+*.exp
